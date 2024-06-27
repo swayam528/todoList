@@ -1,6 +1,11 @@
 const inputBox = document.getElementById("input-box");
  const listContainer = document.getElementById("list-container");
-function addTask(){
+inputBox.addEventListener('keydown', (event) =>{
+    if(event.key === 'Enter'){
+        addTask();
+    }
+ });
+ function addTask(){
     if(inputBox.value === ''){
         alert("Please enter something!");
     }
